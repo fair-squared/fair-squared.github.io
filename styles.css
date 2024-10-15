@@ -1,0 +1,296 @@
+/* General reset to ensure consistency */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #ffffff; /* Clean white background */
+    color: #333; /* Dark gray for readability */
+    padding: 0;
+    margin: 0;
+    transition: background-color 0.3s ease;
+}
+
+/* Smooth Scroll for Anchors */
+html {
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+    color: #e60000; /* Vibrant red to match the logo */
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p, ul, li {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s forwards; /* Animating the text to fade in dynamically */
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 40px;
+}
+
+a {
+    color: #e60000; /* Red color to match the logo */
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+a:hover {
+    color: #990000; /* Darker red for hover effect */
+    transform: scale(1.05); /* Scale up slightly on hover */
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hero Section */
+header {
+    background-color: #e60000; /* Red background to complement the logo */
+    color: #ffffff; /* White text for contrast */
+    padding: 60px 20px;
+    text-align: center;
+    position: relative;
+    transition: background-color 0.3s ease;
+    animation: fadeIn 1s forwards; /* Fade in the header */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+header img {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100px; /* Adjust the size of the logo */
+}
+
+header h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #ffffff; /* Ensure the main heading is white for readability */
+    transform: translateY(20px);
+    opacity: 0;
+    animation: fadeInUp 1s forwards 0.2s; /* Delay the heading fade-in animation slightly */
+}
+
+header p {
+    font-size: 1.25rem;
+    margin-bottom: 40px;
+    color: #ffffff; /* Ensure subtext is white for better visibility */
+    transform: translateY(20px);
+    opacity: 0;
+    animation: fadeInUp 1s forwards 0.4s; /* Delay the paragraph fade-in animation slightly */
+}
+
+header .cta {
+    background-color: #ffffff; /* Light background for the button */
+    color: #e60000; /* Red text for the button */
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    transform: scale(1);
+    opacity: 0;
+    animation: fadeInUp 1s forwards 0.6s; /* Delay the CTA button fade-in animation */
+}
+
+header .cta:hover {
+    background-color: #990000; /* Darker red on hover */
+    color: #ffffff; /* White text on hover */
+    transform: scale(1.05); /* Slightly scale up on hover for emphasis */
+}
+
+/* Navigation */
+nav {
+    margin-bottom: 40px;
+    text-align: center;
+    opacity: 0;
+    animation: fadeInUp 0.8s forwards 0.3s; /* Navigation fades in with delay */
+}
+
+nav a {
+    color: #ffffff; /* White links for visibility on red background */
+    margin: 0 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+    color: #f9b3b3; /* Light red for hover effect */
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+/* Sections */
+section {
+    padding: 60px 20px;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #e60000; /* Red for section headings */
+    transform: translateY(20px);
+    opacity: 0;
+    animation: fadeInUp 0.8s forwards 0.2s; /* Delayed fade-in for section titles */
+}
+
+section p, section ul {
+    margin: 0 auto;
+    max-width: 800px;
+    line-height: 1.8;
+    text-align: center;
+    color: #333; /* Dark gray for readability */
+    transform: translateY(20px);
+    opacity: 0;
+    animation: fadeInUp 1s forwards 0.4s; /* Delayed animation for paragraphs and lists */
+}
+
+section ul {
+    text-align: left;
+}
+
+section .cta {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 25px;
+    background-color: #e60000; /* CTA button matching logo color */
+    color: #ffffff; /* White text for contrast */
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    transform: scale(1);
+    opacity: 0;
+    animation: fadeInUp 1s forwards 0.6s; /* Delayed animation for CTA buttons */
+}
+
+section .cta:hover {
+    background-color: #990000; /* Darker red on hover */
+    color: #ffffff; /* Ensure white text remains visible */
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+/* Footer */
+footer {
+    background-color: #333; /* Dark footer background */
+    color: #ffffff; /* White text for contrast */
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+footer p {
+    margin: 0;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: fadeInUp 0.5s forwards 0.2s; /* Footer fades in dynamically */
+}
+
+/* Buttons */
+.cta {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1rem;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #e60000; /* Red background for buttons */
+    color: #ffffff; /* White text for readability */
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    transform: scale(1);
+}
+
+.cta:hover {
+    background-color: #990000; /* Darker red on hover */
+    color: #ffffff; /* White text on hover */
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+/* Logo Story Section */
+#logo-story {
+    text-align: center;
+    padding: 80px 20px; /* Increase padding for better spacing */
+    background-color: #000; /* Black background for contrast */
+    color: #f4f4f4; /* Lighten the text for better readability */
+}
+
+#logo-story img {
+    width: 150px;
+    margin-bottom: 30px; /* More space between the logo and the text */
+}
+
+#logo-story p {
+    font-size: 1.3rem; /* Increase font size slightly */
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.9; /* Improve line spacing for better readability */
+    letter-spacing: 0.5px; /* Slightly increase letter spacing for clarity */
+    color: #f4f4f4; /* Make the text a lighter shade of white */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    header p {
+        font-size: 1.1rem;
+    }
+
+    section h2 {
+        font-size: 1.8rem;
+    }
+
+    section p, section ul {
+        font-size: 0.95rem;
+    }
+
+    nav a {
+        font-size: 1rem;
+    }
+}

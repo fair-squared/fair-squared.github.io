@@ -1,1 +1,0 @@
-# fair-squared.github.io
